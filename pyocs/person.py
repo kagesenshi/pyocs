@@ -5,6 +5,7 @@ def Person(**data):
     return make_object(schema.IPerson, data)
 
 def xml_decoder(data):
+    data['privacy'] = int(data.get('privacy', 0))
     return Person(**data)
 
 class PersonService(object):
