@@ -19,6 +19,9 @@ setup(name='pyocs',
       zip_safe=False,
       install_requires=[
           # -*- Extra requirements: -*-
+          'xmldict>=0.4',
+          'zope.interface',
+          'zope.schema'
       ],
       entry_points="""
       # -*- Entry points: -*-

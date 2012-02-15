@@ -2,7 +2,10 @@ from pyocs import schema
 from pyocs.base import make_object, Result
 
 def Person(**data):
-    return make_object(haifuschema.IPerson, data)
+    return make_object(schema.IPerson, data)
+
+def xml_decoder(data):
+    return Person(**data)
 
 class PersonService(object):
 
